@@ -28,14 +28,14 @@ public class StockDbImpl implements StockDb {
     public void addProduct(Product product) {
         Session session = this.sessionFactory.getCurrentSession();
         session.persist(product);
-        logger.info("Товар успешно добавлен. Информация: " + product);
+        logger.info("This product was successfully added. Information: " + product);
     }
 
     @Override
     public void updateProduct(Product product) {
         Session session = this.sessionFactory.getCurrentSession();
         session.update(product);
-        logger.info("Товар успешно изменён. Информация: " + product);
+        logger.info("This product was successfully changed. Information: " + product);
     }
 
     @Override
@@ -45,7 +45,7 @@ public class StockDbImpl implements StockDb {
 
         if(product!=null){
             session.delete(product);
-            logger.info("Товар успешно удален. Информация " + product);
+            logger.info("The product was deleted successfully. Information: " + product);
         }
     }
 
@@ -53,7 +53,7 @@ public class StockDbImpl implements StockDb {
     public Product getProductById(int id) {
         Session session = this.sessionFactory.getCurrentSession();
         Product product = (Product) session.load(Product.class, new Integer(id));
-        logger.info("Товар загружен . Информация " + product);
+        logger.info("Product loaded. Information: " + product);
         return product;
     }
 
