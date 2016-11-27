@@ -1,0 +1,8 @@
+CREATE TABLE `Stock`.`Products` (
+ `id` INT NOT NULL AUTO_INCREMENT,
+ `title` VARCHAR(255) NOT NULL,
+ `manufacturer` VARCHAR(90) NOT NULL,
+ `articul` VARCHAR(60) NOT NULL,
+ `price` INT NOT NULL,
+ PRIMARY KEY (`id`))
+DEFAULT CHARACTER SET = utf8;

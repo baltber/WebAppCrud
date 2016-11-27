@@ -64,7 +64,7 @@
         <td>${product.title}</td>
         <td>${product.manufacturer}</td>
         <td>${product.articul}</td>
-        <td>${product.price/100}${product.price%100}</td>
+        <td>${product.price}</td>
     </tr>
 </table>
 </body>

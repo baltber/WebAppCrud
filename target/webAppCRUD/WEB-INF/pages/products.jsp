@@ -61,18 +61,18 @@
             <td width="120">Manufacturer</td>
             <td width="60">Vendor code</td>
             <td width="60">Price</td>
-            <td width="60">Edit</td>
-            <td width="60">Delete</td>
+            <td width="70">Edit</td>
+            <td width="70">Delete</td>
         </tr>
         <c:forEach items="${listProducts}" var="product">
             <tr>
                 <td>${product.id}</td>
-                <td>${product.title}</td>
+                <td><a href ="/productsdata/${product.id}" target="_blank" >${product.title}</a></td>
                 <td>${product.manufacturer}</td>
                 <td>${product.articul}</td>
-                <td>${product.price/100}${product.price%100}</td>
-                <td><a href="<c:url value='/edit/${product.id}'/>">">Edit</a></td>
-                <td><a href="<c:url value='/remove/${product.id}'/>">">Delete</a></td>
+                <td>${product.price}</td>
+                <td><a href="<c:url value='/edit/${product.id}'/>">Edit</a></td>
+                <td><a href="<c:url value='/remove/${product.id}'/>">Delete</a></td>
                 <td></td>
 
 

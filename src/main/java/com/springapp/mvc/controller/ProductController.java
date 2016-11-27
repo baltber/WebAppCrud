@@ -52,10 +52,10 @@ public class ProductController {
 
         return "products";
     }
-    @RequestMapping("/productdta/{id}")
+    @RequestMapping("/productsdata/{id}")
     public String productData(@PathVariable("id") int id, Model model){
     model.addAttribute("product", this.productService.getProductById(id));
-        return "productdta";
+        return "productsdata";
     }
 
 
